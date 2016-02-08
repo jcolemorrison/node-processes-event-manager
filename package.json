@@ -1,0 +1,64 @@
+{
+  "name": "pc-system",
+  "version": "0.0.0",
+  "description": "solving the great producer consumer problem",
+  "homepage": "",
+  "author": {
+    "name": "J Cole Morrison",
+    "email": "j.cole.morrison@gmail.com",
+    "url": "start.jcolemorrison.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "babel-core": "^5.5.0",
+    "babel-eslint": "^4.1.6",
+    "chai": "^3.5.0",
+    "del": "^2.0.2",
+    "eslint-config-xo-space": "^0.7.0",
+    "eslint-plugin-babel": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3",
+    "proxyquire": "^1.7.4",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "arrow-body-style": 0,
+      "babel/arrow-parens": 0,
+      "prefer-arrow-callback": 0,
+      "no-var": 0,
+      "babel/object-curly-spacing": 0,
+      "no-undef": 0,
+      "quote-props": 0,
+      "padded-blocks": 0,
+      "comma-spacing": 0,
+      "no-unused-expressions": 0,
+      "no-unused-vars": 0,
+      "max-nested-callbacks": 0
+    }
+  },
+  "repository": "jcolemorrison/pc-system",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
