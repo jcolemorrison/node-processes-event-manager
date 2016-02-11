@@ -37,7 +37,7 @@ You can change the rate at which the 2 producers create expressions and the size
 
 The while the 2 producers are bound to a time limit, the consumer will literally try and fetch from the bounded buffer as fast as possible.  If there are no expressions in the buffer, it will sleep.
 
-*If the child processes fail, it's because the core's aren't available.  Try closing some applications and restarting.  It does require 4 cores.*
+*If the child processes fail, it's because the core's aren't available.  Try closing some applications and restarting.  The node has to grab ownership of the OS's attention to delegate the cores.  It does require 4 cores.*
 
 
 ## UML Activity Diagrams
