@@ -100,7 +100,6 @@ describe('manager', () => {
         var resumeProductionCallbackStub = sinon.stub(manager, 'resumeProduction');
         currentBuffer = [1, 2, 3, 4, 5, 6 ,7 ,8, 9 ,10];
         manager.boundedBuffer.push(...currentBuffer);
-        console.log('sending consumer expression...');
         consumer.send({ request: 'expression' });
         expect(resumeProductionCallbackStub).to.be.called;
       });

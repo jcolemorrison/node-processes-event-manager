@@ -29,7 +29,7 @@ gulp.task('nsp', (cb) => {
 });
 
 gulp.task('pre-test', function () {
-  return gulp.src('lib/**/*.js')
+  return gulp.src(['lib/**/*.js', '!lib/startup.js'])
     .pipe(excludeGitignore())
     .pipe(istanbul({
       includeUntested: true,

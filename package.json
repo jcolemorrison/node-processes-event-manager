@@ -60,11 +60,13 @@
   "repository": "jcolemorrison/pc-system",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "NODE_ENV=test gulp",
+    "start": "node dist/startup.js"
   },
   "license": "MIT",
   "dependencies": {
     "async": "^1.5.2",
+    "cli-color": "^1.1.0",
     "mathjs": "^2.7.0"
   }
 }
