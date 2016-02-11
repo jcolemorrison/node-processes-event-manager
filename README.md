@@ -33,9 +33,11 @@ $ gulp prepublish
 $ npm start
 ```
 
-You can change the rate at which the 2 producers create expressions and the size of the bounded buffer by tweaking the settings in `config.js`.
+You can change the rate at which the 2 producers create expressions and the size of the bounded buffer (how many expressions it can hold) by tweaking the settings in `config.js`.
 
-If the child processes fail, it's because the core's aren't available.  Try closing some applications and restarting.  It does require 4 cores.
+The while the 2 producers are bound to a time limit, the consumer will literally try and fetch from the bounded buffer as fast as possible.  If there are no expressions in the buffer, it will sleep.
+
+*If the child processes fail, it's because the core's aren't available.  Try closing some applications and restarting.  It does require 4 cores.*
 
 
 ## UML Activity Diagrams
