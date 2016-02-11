@@ -55,7 +55,7 @@ describe('Consumer', () => {
       processConsumer.currentIteration = () => {
         return;
       };
-      processConsumer.sendExpression(message);
+      processConsumer.sendExpression(message.expression);
       expect(consumeExpressionSpy).to.be.calledWith(message.expression);
     });
   });
