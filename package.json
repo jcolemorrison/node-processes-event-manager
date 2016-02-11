@@ -52,7 +52,9 @@
       "comma-spacing": 0,
       "no-unused-expressions": 0,
       "no-unused-vars": 0,
-      "max-nested-callbacks": 0
+      "max-nested-callbacks": 0,
+      "babel/object-shorthand": 0,
+      "default-case": 0
     }
   },
   "repository": "jcolemorrison/pc-system",
@@ -60,5 +62,9 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.2",
+    "mathjs": "^2.7.0"
+  }
 }

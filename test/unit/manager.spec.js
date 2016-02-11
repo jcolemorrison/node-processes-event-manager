@@ -19,7 +19,6 @@ describe('manager', () => {
   describe('Startup', () => {
 
     before(() => {
-      console.log(Manager);
       manager = new Manager(10);
     });
 
@@ -92,9 +91,18 @@ describe('manager', () => {
       });
 
       it('should send a consumer message to resume if length is 1 after pushing', () => {
-        var resumeCallbackStub = sinon.stub(manager, 'resumeConsumption');
+        var resumeConsumptionCallbackStub = sinon.stub(manager, 'resumeConsumption');
         producer.send({ expression: '2+3=' });
-        expect(resumeCallbackStub).to.be.called;
+        expect(resumeConsumptionCallbackStub).to.be.called;
+      });
+
+      it('should send a message to the producer to resume production if there is space', () => {
+        var resumeProductionCallbackStub = sinon.stub(manager, 'resumeProduction');
+        currentBuffer = [1, 2, 3, 4, 5, 6 ,7 ,8, 9 ,10];
+        manager.boundedBuffer.push(...currentBuffer);
+        console.log('sending consumer expression...');
+        consumer.send({ request: 'expression' });
+        expect(resumeProductionCallbackStub).to.be.called;
       });
 
     });

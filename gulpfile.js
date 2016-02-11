@@ -45,7 +45,8 @@ gulp.task('test', ['pre-test'], (cb) => {
     .pipe(plumber())
     .pipe(mocha({
       reporter: 'nyan',
-      globals: Object.keys(mochaGlobals.globals)
+      globals: Object.keys(mochaGlobals.globals),
+      timeout: 3000
     }))
     .on('error', function (err) {
       console.log(err);
