@@ -14,7 +14,7 @@ This takes an approach using an intermediate manager in order to actually simula
 
 # IMPORTANT NOTE:
 
-Because it leverages node's child_process module - it does require you to have your CPU open to use.  So if you have a ton of applications open, the child processes will fail since the OS will have them rest and start trying to flip to other applications.  It does use 4 cores (1x Manager, 2x Producer and 1x Consumer) (granted very very lightly).
+Because it leverages node's child_process module - it does require you to have your CPU open to use.  So if you have a ton of applications open, the child processes will fail since the OS will have them rest and start trying to flip to other applications.  It does `REQUIRE` 4 cores (1x Manager, 2x Producer and 1x Consumer) (granted very very lightly).
 
 In fact, the best bet, is to close Google Chrome....
 
