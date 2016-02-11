@@ -14,7 +14,7 @@ This takes an approach using an intermediate manager in order to actually simula
 
 # IMPORTANT NOTE:
 
-Because it leverages node's child_process module - it does require you to have your CPU open to use.  So if you have a ton of applications open, the child processes will fail since the OS will have them rest and start trying to flip to other applications.  It does use 4 processes (1x Manager, 2x Producer and 1x Consumer).
+Because it leverages node's child_process module - it does require you to have your CPU open to use.  So if you have a ton of applications open, the child processes will fail since the OS will have them rest and start trying to flip to other applications.  It does use 4 cores (1x Manager, 2x Producer and 1x Consumer) (granted very very lightly).
 
 ## Usage
 
@@ -32,6 +32,8 @@ $ node dist/startup.js
 ```
 
 You can change the rate at which the 2 producers create expressions and the size of the bounded buffer by tweaking the settings in `config.js`.
+
+If the child processes fail, it's because the core's aren't available.  Try closing some applications and restarting.  It does require 4 cores.
 
 
 ## UML Activity Diagrams
