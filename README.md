@@ -10,7 +10,7 @@ $ npm install
 
 ## Notes
 
-This takes an approach using an intermediate manager in order to actually simulate a bounded buffer instead of assuming we will have one via the hardware.  Also, instead of using separate web-servers, it leverages child processes and inter-process-communication (IPC) in order to take full advantage and speed of the system.
+This takes an approach using an intermediate manager in order to actually simulate a bounded buffer instead of assuming we will have one via the hardware.  Also I got (maybe to my own dismay) a little experimental - instead of using separate web-servers, it leverages child processes and inter-process-communication (IPC) in order to take full advantage and speed of the system.
 
 # IMPORTANT NOTE:
 
