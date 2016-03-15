@@ -1,4 +1,4 @@
-# PC-System
+# Node Processes Event Manager
 
 ## Installation
 
